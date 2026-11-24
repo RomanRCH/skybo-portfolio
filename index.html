@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f3f4f6" />
+  <meta name="description" content="Skybo — building, AI, Web3, tech and travel. An interactive video portfolio." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%23f3f4f6%22/><path d=%22M15 20l10 12-10 12M30 44h20%22 fill=%22none%22 stroke=%22%23255e73%22 stroke-width=%225%22 stroke-linecap=%22square%22/></svg>" />
+  <link rel="preload" href="./fonts/space-mono-bold.ttf" as="font" type="font/ttf" crossorigin />
+  <link rel="preload" href="./fonts/space-mono.ttf" as="font" type="font/ttf" crossorigin />
+  <link rel="preload" href="./skybo.jpg" as="image" />
+  <title>Skybo — Building & AI</title>
+  <script type="module" crossorigin src="./assets/index-BJpYl-Mx.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/motion-IF_rOFC0.js">
+  <link rel="modulepreload" crossorigin href="./assets/three-B0wS5Jx5.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-BhpnZyMI.css">
+</head>
+<body>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-mark">&gt; skybo<span>_</span></div>
+    <div class="loader-bottom"><span>LOADING PORTFOLIO</span><span id="loader-count">000</span></div>
+    <div class="loader-track"><span id="loader-bar"></span></div>
+  </div>
+
+  <div class="ambient" aria-hidden="true"></div>
+  <div id="webgl" aria-hidden="true"></div>
+  <div class="fallback-portrait" aria-hidden="true"><img src="./skybo.jpg" alt="" /></div>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand magnetic" href="#top" aria-label="Skybo — back to top">&gt; skybo<span>_</span></a>
+    <div class="header-right">
+      <button class="sound-toggle magnetic" id="sound-toggle" type="button" aria-label="Turn ambient sound on" aria-pressed="false">
+        <span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span id="sound-label">SOUND OFF</span>
+      </button>
+      <nav class="nav-pill" aria-label="Main navigation">
+        <a href="#profile" data-nav="profile">PROFILE</a>
+        <a href="#work" data-nav="work">WORK</a>
+        <a href="#connect" data-nav="connect">CONNECT</a>
+      </nav>
+    </div>
+  </header>
+
+  <aside class="scene-progress" aria-label="Page sections">
+    <div class="progress-track" aria-hidden="true"><span id="progress-fill"></span></div>
+    <button type="button" class="progress-dot is-active" data-jump="top" aria-label="Go to introduction"><span>01</span></button>
+    <button type="button" class="progress-dot" data-jump="profile" aria-label="Go to profile"><span>02</span></button>
+    <button type="button" class="progress-dot" data-jump="work" aria-label="Go to video portfolio"><span>03</span></button>
+    <button type="button" class="progress-dot" data-jump="connect" aria-label="Go to contact"><span>04</span></button>
+  </aside>
+
+  <main>
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-kicker reveal-item">
+        <span class="signal-dot" aria-hidden="true"></span>
+        <span>BUILDING & AI</span>
+        <span class="hero-kicker-line" aria-hidden="true"></span>
+        <span>WEB3 • TECH • TRAVEL</span>
+      </div>
+      <div class="hero-side hero-side-left" aria-hidden="true">INTERACTIVE PORTFOLIO — 2026</div>
+      <div class="hero-side hero-side-right" aria-hidden="true">MOVE YOUR CURSOR</div>
+      <div class="hero-center-note reveal-item" aria-hidden="true"><span>CODE / CREATE / EXPLORE</span><span>THE JOURNEY IS THE PROJECT</span></div>
+      <h1 class="hero-title" id="hero-title" aria-label="skybo"><span>s</span><span>k</span><span>y</span><span>b</span><span>o</span></h1>
+      <div class="hero-bottom reveal-item">
+        <p>NOT JUST A PROFILE<br />A LIVING VIDEO PLAYGROUND</p>
+        <p class="hero-bottom-right">BUILT IN REAL TIME<br />WITH THREE.JS / WEBGL</p>
+      </div>
+    </section>
+
+    <section class="profile section" id="profile" aria-labelledby="profile-title">
+      <div class="section-copy profile-copy">
+        <div class="section-label"><span>02</span><i></i><span>WHO IS SKYBO</span></div>
+        <h2 id="profile-title">CODE CREATE<br /><span>EXPLORE</span></h2>
+        <p class="section-lead">Building at the intersection of Web3, AI, technology and whatever comes next</p>
+        <p class="section-body">This is my corner of the internet — a place for videos, experiments and notes from the journey — Always learning, always building</p>
+        <ul class="disciplines" aria-label="Topics"><li>WEB3</li><li>AI / TECH</li><li>TRAVEL</li><li>VIDEO</li></ul>
+        <div class="profile-caption"><span>THIS SITE IS THE PROJECT</span><span>AND THIS IS ONLY THE BEGINNING</span></div>
+      </div>
+      <div id="profile-video-slot" aria-label="Future profile video"></div>
+      <div class="object-caption" aria-hidden="true"><span>VIDEO_001</span><span>PLAYS AUTOMATICALLY WHEN VISIBLE</span></div>
+    </section>
+
+    <section class="work section" id="work" aria-labelledby="work-title">
+      <div class="work-copy">
+        <div class="work-heading">
+          <div class="section-label"><span>03</span><i></i><span>VIDEO PORTFOLIO</span></div>
+          <h2 id="work-title">SELECTED<br /><span>DROPS</span></h2>
+          <p class="section-lead">Experiments, builds and moments — captured in motion</p>
+        </div>
+        <div id="work-content"></div>
+      </div>
+    </section>
+
+    <section class="connect section" id="connect" aria-labelledby="connect-title">
+      <div class="section-copy connect-copy">
+        <div class="section-label"><span>04</span><i></i><span>KEEP THE SIGNAL GOING</span></div>
+        <h2 id="connect-title">LET’S<br /><span>CONNECT</span></h2>
+        <p class="section-lead">Found me through X? Send this little world to someone else</p>
+        <div class="connect-actions">
+          <a class="primary-action magnetic" id="share-x" href="https://x.com/Skybornfx" target="_blank" rel="noreferrer"><span>MY X PROFILE</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M9 5h10v10" /></svg></a>
+          <button class="secondary-action magnetic" id="copy-link" type="button"><span>COPY LINK</span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="11" rx="2" /><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" /></svg></button>
+        </div>
+        <div class="connect-status"><span class="signal-dot" aria-hidden="true"></span><span>ALWAYS OPEN TO THE NEXT GOOD IDEA</span></div>
+      </div>
+      <footer class="site-footer"><span>© 2026 SKYBO</span><span class="footer-time">LOCAL TIME — <time id="local-time">00:00:00</time></span><a href="#top" class="back-top">BACK TO TOP <span aria-hidden="true">↑</span></a></footer>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">LINK COPIED TO CLIPBOARD</div>
+  <noscript><div class="noscript">Enable JavaScript to experience Skybo’s interactive portfolio</div></noscript>
+</body>
+</html>
